@@ -1,3 +1,4 @@
+import { CallableInstance } from "unified/lib/callable-instance"
 import { ValidDateType } from "./components/Date"
 import { QuartzComponent } from "./components/types"
 import { ValidLocale } from "./i18n"

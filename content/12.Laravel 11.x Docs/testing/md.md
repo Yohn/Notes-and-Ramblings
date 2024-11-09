@@ -1,0 +1,26 @@
+| [assertTitle](#assertTitle) | [assertSee](#assertSee) | [assertAttribute](#assertAttribute) |
+| [assertTitleContains](#assertTitleContains) | [assertDontSee](#assertDontSee) | [assertAttributeContains](#assertAttributeContains) |
+| [assertUrlIs](#assertUrlIs) | [assertSeeIn](#assertSeeIn) | [assertAttributeDoesntContain](#assertAttributeDoesntContain) |
+| [assertSchemeIs](#assertSchemeIs) | [assertDontSeeIn](#assertDontSeeIn) | [assertAriaAttribute](#assertAriaAttribute) |
+| [assertSchemeIsNot](#assertSchemeIsNot) | [assertSeeAnythingIn](#assertSeeAnythingIn) | [assertDataAttribute](#assertDataAttribute) |
+| [assertHostIs](#assertHostIs) | [assertSeeNothingIn](#assertSeeNothingIn) | [assertVisible](#assertVisible) |
+| [assertHostIsNot](#assertHostIsNot) | [assertScript](#assertScript) | [assertPresent](#assertPresent) |
+| [assertPortIs](#assertPortIs) | [assertSourceHas](#assertSourceHas) | [assertNotPresent](#assertNotPresent) |
+| [assertPortIsNot](#assertPortIsNot) | [assertSourceMissing](#assertSourceMissing) | [assertMissing](#assertMissing) |
+| [assertPathBeginsWith](#assertPathBeginsWith) | [assertSeeLink](#assertSeeLink) | [assertInputPresent](#assertInputPresent) |
+| [assertPathEndsWith](#assertPathEndsWith) | [assertDontSeeLink](#assertDontSeeLink) | [assertInputMissing](#assertInputMissing) |
+| [assertPathContains](#assertPathContains) | [assertInputValue](#assertInputValue) | [assertDialogOpened](#assertDialogOpened) |
+| [assertPathIs](#assertPathIs) | [assertInputValueIsNot](#assertInputValueIsNot) | [assertEnabled](#assertEnabled) |
+| [assertPathIsNot](#assertPathIsNot) | [assertChecked](#assertChecked) | [assertDisabled](#assertDisabled) |
+| [assertRouteIs](#assertRouteIs) | [assertNotChecked](#assertNotChecked) | [assertButtonEnabled](#assertButtonEnabled) |
+| [assertQueryStringHas](#assertQueryStringHas) | [assertIndeterminate](#assertIndeterminate) | [assertButtonDisabled](#assertButtonDisabled) |
+| [assertQueryStringMissing](#assertQueryStringMissing) | [assertRadioSelected](#assertRadioSelected) | [assertFocused](#assertFocused) |
+| [assertFragmentIs](#assertFragmentIs) | [assertRadioNotSelected](#assertRadioNotSelected) | [assertNotFocused](#assertNotFocused) |
+| [assertFragmentBeginsWith](#assertFragmentBeginsWith) | [assertSelected](#assertSelected) | [assertAuthenticated](#assertAuthenticated) |
+| [assertFragmentIsNot](#assertFragmentIsNot) | [assertNotSelected](#assertNotSelected) | [assertGuest](#assertGuest) |
+| [assertHasCookie](#assertHasCookie) | [assertSelectHasOptions](#assertSelectHasOptions) | [assertAuthenticatedAs](#assertAuthenticatedAs) |
+| [assertHasPlainCookie](#assertHasPlainCookie) | [assertSelectMissingOptions](#assertSelectMissingOptions) | [assertVue](#assertVue) |
+| [assertCookieMissing](#assertCookieMissing) | [assertSelectHasOption](#assertSelectHasOption) | [assertVueIsNot](#assertVueIsNot) |
+| [assertPlainCookieMissing](#assertPlainCookieMissing) | [assertSelectMissingOption](#assertSelectMissingOption) | [assertVueContains](#assertVueContains) |
+| [assertCookieValue](#assertCookieValue) | [assertValue](#assertValue) | [assertVueDoesntContain](#assertVueDoesntContain) |
+| [assertPlainCookieValue](#assertPlainCookieValue) | [assertValueIsNot](#assertValueIsNot) | |

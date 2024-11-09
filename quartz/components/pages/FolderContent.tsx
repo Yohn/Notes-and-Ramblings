@@ -48,7 +48,7 @@ export default ((opts?: Partial<FolderContentOptions>) => {
         allPagesInFolder.push(file)
       } else if (options.showSubfolders) {
         const subfolderSlug = joinSegments(
-          ...fileParts.slice(0, folderParts.length + 1),
+          ...fileParts.slice(0, folderParts.length + 1)+'.html'
         ) as FullSlug
         const pagesInFolder = allPagesInSubfolders.get(subfolderSlug) || []
         allPagesInSubfolders.set(subfolderSlug, [...pagesInFolder, file])

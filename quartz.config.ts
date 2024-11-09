@@ -8,16 +8,24 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "🪴 Quartz 4.0",
+    pageTitle: "Yohns Notes",
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,
-    analytics: {
-      provider: "plausible",
-    },
+    analytics: null,
+    //{
+    //  provider: "plausible",
+    //},
     locale: "en-US",
-    baseUrl: "quartz.jzhao.xyz",
-    ignorePatterns: ["private", "templates", ".obsidian"],
+    baseUrl: "127.0.0.1:5500",
+    ignorePatterns: [
+      "private",
+      "templates",
+      ".obsidian",
+      "**/*secret",
+      "**/*Secret",
+      "10.Visual Impressions",
+    ],
     defaultDateType: "created",
     theme: {
       fontOrigin: "googleFonts",

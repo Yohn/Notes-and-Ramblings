@@ -9,7 +9,7 @@ const TagList: QuartzComponent = ({ fileData, displayClass }: QuartzComponentPro
     return (
       <ul class={classNames(displayClass, "tags")}>
         {tags.map((tag) => {
-          const linkDest = baseDir + `/tags/${slugTag(tag)}`
+          const linkDest = `/tags/${slugTag(tag)}.html`
           return (
             <li>
               <a href={linkDest} class="internal tag-link">
@@ -38,7 +38,7 @@ TagList.css = `
 .section-li > .section > .tags {
   justify-content: flex-end;
 }
-  
+
 .tags > li {
   display: inline-block;
   white-space: nowrap;

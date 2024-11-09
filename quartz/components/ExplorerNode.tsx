@@ -170,13 +170,15 @@ export function ExplorerNode({ node, opts, fullPath, fileData }: ExplorerNodePro
   // Calculate current folderPath
   const folderPath = node.name !== "" ? joinSegments(fullPath ?? "", node.name) : ""
   const href = resolveRelative(fileData.slug!, folderPath as SimpleSlug) + "/"
-
+  const yoUrl = node.file == null ? '' : `/${node.file.slug}.html`
   return (
     <>
       {node.file ? (
         // Single file node
+        // <a href={resolveRelative(fileData.slug!, node.file.slug!)} data-for={node.file.slug}>
+        //node.file.slug = `/{node.file.slug}.html`
         <li key={node.file.slug}>
-          <a href={resolveRelative(fileData.slug!, node.file.slug!)} data-for={node.file.slug}>
+          <a href={yoUrl} data-for={yoUrl}>
             {node.displayName}
           </a>
         </li>

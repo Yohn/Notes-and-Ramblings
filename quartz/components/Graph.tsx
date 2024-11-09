@@ -62,6 +62,10 @@ export default ((opts?: GraphOptions) => {
     const globalGraph = { ...defaultOptions.globalGraph, ...opts?.globalGraph }
     return (
       <div class={classNames(displayClass, "graph")}>
+        <div>
+          <img src="/static/cableIn.svg" alt="Cable" loading="lazy" style="max-width:100%; height:auto;" /><br />
+        </div>
+
         <h3>{i18n(cfg.locale).components.graph.title}</h3>
         <div class="graph-outer">
           <div id="graph-container" data-cfg={JSON.stringify(localGraph)}></div>
