@@ -5,7 +5,6 @@
 html {
   scroll-behavior: smooth;
   text-size-adjust: none;
-  overflow-x: hidden;
   width: 100vw;
 }
 
@@ -145,7 +144,7 @@ a {
     }
 
     p > strong {
-      color: var(--dark);
+      color: var(--tertiary);
     }
   }
 
@@ -184,8 +183,8 @@ a {
       box-sizing: border-box;
       padding: $topSpacing 2rem 2rem 2rem;
       display: flex;
-      height: 100vh;
-      position: sticky;
+      /*height: 100vh;
+      position: sticky;*/
     }
 
     & .sidebar.left {

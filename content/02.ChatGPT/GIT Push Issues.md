@@ -86,7 +86,7 @@ Make sure Git is configured to use the correct user credentials:
 
 ```bash
 git config --global user.name "Yohn"
-git config --global user.email "john.skem9@gmail.com"
+git config --global user.email "user@email.com"
 ```
 
 ### 2. Verify your remote URL
@@ -106,7 +106,7 @@ If you’re using HTTPS and facing issues, try switching to SSH. Here’s how to
 - Generate an SSH key if you don't already have one:
 
   ```bash
-  ssh-keygen -t rsa -b 4096 -C "john.skem9@gmail.com"
+  ssh-keygen -t rsa -b 4096 -C "user@email.com"
   ```
 
 - Add the SSH key to your GitHub account. Copy the public key:

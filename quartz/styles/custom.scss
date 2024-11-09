@@ -1,3 +1,155 @@
+@use 'sass:color';
 @use "./base.scss";
 
+
 // put your custom CSS here!
+.h1, h2, h3, h4, h5, h6 {
+  color: #fc9494;
+}
+
+strong,.cm-strong {
+	color: lightskyblue;
+}
+code,span.cm-inline-code {
+	color: #f78ac5 !important;
+}
+
+table tr:nth-child(odd) {
+	background-color: #2e2e2e; /* Darker color for odd rows */
+	transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+table tr:nth-child(even) {
+	background-color: #1b1b1b; /* Slightly lighter color for even rows */
+	transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+table tr:nth-child(odd):hover {
+	background-color: #1d1d1d; /* New color on hover for odd rows */
+}
+
+table tr:nth-child(even):hover {
+	background-color: #272727; /* New color on hover for even rows */
+}
+
+table {
+	border-collapse: collapse; /* Optional: to remove cell spacing */
+	width:100%;
+	margin:0 auto;
+}
+
+table thead tr {
+	background-color: #000000;
+}
+
+table, th, td {
+	border: 1px solid #555555; /* Optional: to add border styling */
+}
+
+:root {
+  /* ================================ Colors ================================ */
+  --red: 				#e22c3c;		//~ 00 ~ Starts of Folder
+  --red-orange: #e9404b;		//~ 01 ~ Starts of Folder
+  --orange: 		#ee6748;		//~ 02 ~ Starts of Folder
+  --amber:			#fa9f50;		//~ 03 ~ Starts of Folder
+  --yellow:			#ffd85e;		//~ 04 ~ Starts of Folder
+  --lime:				#97e768;		//~ 05 ~ Starts of Folder
+  --mint:				#52eea3;		//~ 06 ~ Starts of Folder
+  --cyan:				#51e1e9;		//~ 07 ~ Starts of Folder
+  --cool-cyan: 	#43cfea;		//~ 08 ~ Starts of Folder
+  --light-blue: #54b6f8;		//~ 09 ~ Starts of Folder
+  --blue: 			#437cf3;		//~ 10 ~ Starts of Folder
+  --blue-violet:#6f51f4;		//~ 11 ~ Starts of Folder
+  --violet:			#9446f8;		//~ 12 ~ Starts of Folder
+  --purple: 		#c952ed;		//~ 13 ~ Starts of Folder
+  --magenta: 		#e54f9b;		//~ 14 ~ Starts of Folder
+  --hot-red: 		#e3365e;		//~ 15 ~ Starts of Folder
+  --cool-gray: 	#515768;		//~ 99 ~ Starts of Folder
+
+  --contrast-color: var(--secondary);
+  --bg-contrast-amount: 15%;
+  --fg-contrast-amount: 40%;
+  --default-text-color: #d0d0d0;
+  --highlight: #fff;
+  --shadow: #0b0c2c;
+
+	&[saved-theme="light"] {
+		--shadow: #0b0c2c;
+		--contrast-color: var(--secondary);
+		--default-text-color: var(--secondary);
+		--bg-contrast-amount: 70%;
+		--fg-contrast-amount: 30%;
+		--medium-contrast-amount: 60%;
+		--active-contrast-amount: 30%;
+
+		/* Darker Versions of Bright Colors for Light Theme */
+		--yellow: color-mix(in srgb, #ffd85e 90%, var(--shadow));
+		--lime: color-mix(in srgb, #97e768 90%, var(--shadow));
+		--mint: color-mix(in srgb, #52eea3 85%, var(--shadow));
+		--cyan: color-mix(in srgb, #51e1e9 85%, var(--shadow));
+		--cool-cyan: color-mix(in srgb, #43cfea 85%, var(--shadow));
+		--light-blue: color-mix(in srgb, #54b6f8 90%, var(--shadow));
+	}
+
+	&[saved-theme="dark"] {
+		--highlight: #fff;
+		--contrast-color: var(--secondary);
+		--bg-contrast-amount: 15%;
+		--fg-contrast-amount: 40%;
+		--medium-contrast-amount: 20%;
+		--active-contrast-amount: 10%;
+	}
+}
+$rainbow: (
+  '00': --red,					//'00':
+  '01': --red-orange,		//'01':
+  '02': --orange,				//'02':
+  '03': --amber,				//'03':
+  '04': --yellow,				//'04':
+  '05': --lime,					//'05':
+  '06': --mint,					//'06':
+  '07': --cyan,					//'07':
+  '08': --cool-cyan,		//'08':
+  '09': --light-blue,		//'09':
+  '10': --blue,					//'10':
+  '11': --blue-violet,	//'11':
+  '12': --violet,				//'12':
+  '13': --purple,				//'13':
+  '14': --magenta,			//'14':
+  '15': --hot-red,			//'15':
+  '99': --cool-gray,		//'99':
+);
+
+
+/* All Folder Titles */
+.nav-folder-title {
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+@mixin generate-styles($color-code, $color-variable, $level: 1) {
+  $multiplier: $level * 10%;
+	$fg-contrast-amount: 35%;
+	//div[data-folderpath="02*"] button span.folder-title
+  div[data-folderpath^="#{$color-code}"] button span.folder-title,
+  div[data-folderpath*="/#{$color-code}"] > button > span.folder-title {
+    color: var(#{$color-variable});
+		//color-mix(in srgb,
+		//	var(#{$color-variable}) var($fg-contrast-amount * $multiplier),
+		//	#cccccc
+		//);
+    &:hover {
+			color: adjust(var(#{$color-variable}), #cccccc, 30);
+			//background-color: color-mix(in srgb, var(#{$color-variable}) var(15% * $multiplier), #cccccc);
+		}
+
+		&:focus {
+			border-color: adjust(var(#{$color-variable}), #777, 15);
+    	//border: color-mix(in srgb, var(#{$color-variable}) calc(40% * $multiplier), transparent);
+		}
+  }
+}
+
+@each $color-code, $color-variable in $rainbow {
+  @include generate-styles($color-code, $color-variable);
+}
